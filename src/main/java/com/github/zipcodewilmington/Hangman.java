@@ -10,14 +10,22 @@ import java.util.Random;
  */
 public class Hangman {
     public static void main(String[] args) {
-        String line;
-        Scanner in = new Scanner(System.in);
+
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Would you like to play a game?");
         System.out.println("(Y/N)?");
         System.out.print("Choose: ");
-        line = in.nextLine();
-        System.out.println();
-        System.out.println("````` Hangman Deluxe v 1.0 ````");
+        String answer = scanner.nextLine();
+
+          // if player chooses yes or no
+         if (answer.equalsIgnoreCase("Y")){
+
+             System.out.println ("````` Hangman Deluxe v 1.0 ````");
+         } else {
+             System.out.println ("You thought you had a choice?");
+
+         }
+           System.out.println("````` Hangman Deluxe v 1.0 ````");
 
     }
 

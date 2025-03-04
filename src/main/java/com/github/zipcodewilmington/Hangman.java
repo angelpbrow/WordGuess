@@ -8,8 +8,15 @@ import java.util.Random;
  * @version 1.0.0
  * @date 5/27/21 11:02 AM
  */
-public class Hangman {
+public static class Hangman {
+
+
     public static void main(String[] args) {
+    Hangman game = new Hangman();
+     game.Gameplay();
+    }
+
+
 
         Scanner scanner = new Scanner(System.in);
         System.out.println("Would you like to play a game?");
@@ -28,6 +35,7 @@ public class Hangman {
            System.out.println("````` Hangman Deluxe v 1.0 ````");
 
     }
+// Gameplay
+    public static void Gameplay(){
 
-
-}
+    }

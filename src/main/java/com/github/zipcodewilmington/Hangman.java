@@ -1,18 +1,29 @@
 package com.github.zipcodewilmington;
-import java.sql.SQLOutput;
 import java.util.Scanner;
-import java.util.Random;
 
 /**
  * @author Angelika
  * @version 1.0.0
  * @date 5/27/21 11:02 AM
  */
-public static class Hangman {
+//Word Guess class
+public static class Wordguess {
 
+     String guessWords;
+     int tries = 0;
+
+    public static void Wordgues(String guessWords, int tries) {
+        this.guessWords = guessWords;
+        this.tries = tries;
+
+
+// array of random words the game asks player to guess
+        String[] guessWords = { "Lawnmower", "Refrigerator", "Toaster", "Blender", "Ladder", "Vacuum"};
+
+    }
 
     public static void main(String[] args) {
-    Hangman game = new Hangman();
+    Wordguess game = new Wordguess();
      game.Gameplay();
     }
 

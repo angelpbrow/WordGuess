@@ -7,24 +7,32 @@ import java.util.Scanner;
  * @date 5/27/21 11:02 AM
  */
 //Word Guess class
-public class Hangman {
+public static class Hangman {
 
-static Scanner input;
+//static Scanner input;
 
-public static void main(String[] args) {
-    hangman();
-    Announce_game();
-    game_over();
-    initialize_game_state();
-    get_next_guessed();
-    ask_to_play_again();
-    print_current_state();
-    process();
-    player_win();
-    player_lost();
+    public static void main(String[] args) {
+        Gameplay game = new Gameplay();
+        game.runGame();
+    }
 }
 
-    public static void hangman() {
+
+
+/* hangman();
+    game.Announce_game();
+    game.game_over();
+    game.initialize_game_state();
+    game.get_next_guessed();
+    game.ask_to_play_again();
+    game.print_current_state();
+    game.process();
+    game.player_win();
+    game.player_lost(); */
+
+
+
+public static void hangman() {
 
 
         Scanner scanner = new Scanner(System.in);
@@ -49,10 +57,10 @@ public static void main(String[] args) {
 
     }
 
-    private static void player_lost() {
+    public static void player_lost() {
     }
 
-    private static void player_win() {
+    public static void player_win() {
     }
 
     private static void process() {
@@ -77,7 +85,7 @@ public static void main(String[] args) {
 
     }
 
-      }
+
 
 
 

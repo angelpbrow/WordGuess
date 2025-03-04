@@ -1,6 +1,6 @@
-package com.github.zipcodewilmington;
+/*package com.github.zipcodewilmington;
 
-public void Gameplay() {
+public void runGame() {
 
     // array of random words the game asks player to guess
     String[] guessWords = { "Lawnmower", "Refrigerator", "Toaster", "Blender", "Ladder", "Vacuum"};
@@ -18,3 +18,4 @@ public void Gameplay() {
     String[] playerLetters ={};
 
 }
+*/

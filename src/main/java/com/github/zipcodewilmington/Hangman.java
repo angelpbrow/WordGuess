@@ -1,22 +1,82 @@
 package com.github.zipcodewilmington;
 import java.util.Scanner;
+import java.util.Random;
 
 /**
  * @author Angelika
  * @version 1.0.0
  * @date 5/27/21 11:02 AM
  */
-//Word Guess class
-public static class Hangman {
+//Hangman class
+public class Hangman {
 
-//static Scanner input;
+ // Lives: o o o
+ // Input: x x x
+ // word: _ell_
+ // Not used:abcd_f__
+ // ---------------
 
     public static void main(String[] args) {
+        //greeting
+
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Would you like to play a game?");
+        System.out.println("(Y/N)?");
+        System.out.print("Choose: ");
+        // if player chooses yes or no
+        String answer = scanner.nextLine();
+
+        if (answer.equalsIgnoreCase("Y")){
+
+            System.out.println ("````` Hangman Deluxe v 1.0 ````");
+        } else {
+            System.out.println ("You thought you had a choice?");
+            System.out.println("````` Hangman Deluxe v 1.0 ````");
+
+            // array of random words the game asks player to guess
+            String[] guessWords = {"lawnmower", "refrigerator", "toaster", "blender", "ladder", "vacuum"};
+
+            Random obj = new Random();
+            int Ran_num = obj.nextInt(6);
+            String word = (guessWords[Ran_num]);
+
+            for (int i = 0; i < word.length(); i++) {
+                word[i] = '_';
+            }
+
+
+            int lives = 0;
+        //scanner to accept user input
+        Scanner scanner = new Scanner(System.in);
+
+        while (lives > word.length()) {
+            System.out.print("Lives: ");
+
+            for (int i = 0; i < lives; i++){
+                System.out.print("o");
+            }
+
+            System.out.println();
+
+            System.out.println("Input: ");
+
+            String input = scanner.nextLine();
+
+            char letter = input.charAt(0);
+
+
+        }
+
+
+
+
+
+
         Gameplay game = new Gameplay();
         game.runGame();
     }
 }
-
+}
 
 
 /* hangman();
@@ -28,7 +88,7 @@ public static class Hangman {
     game.print_current_state();
     game.process();
     game.player_win();
-    game.player_lost(); */
+    game.player_lost();
 
 
 
@@ -86,7 +146,7 @@ public static void hangman() {
     }
 
 
-
+*/
 
 
 

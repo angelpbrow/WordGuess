@@ -1,14 +1,23 @@
 package com.github.zipcodewilmington;
 import java.util.Scanner;
+import java.util.Random;
 
 
 
 public class Gameplay {
     public void runGame() {
-
-        // array of random words the game asks player to guess
+      return null;
+     /*   // array of random words the game asks player to guess
       //  String[] guessWords = {"Lawnmower", "Refrigerator", "Toaster", "Blender", "Ladder", "Vacuum"};
-
+        fungame.Announce_game(); {}
+        game.game_over() {};
+        game.initialize_game_state();
+        game.get_next_guessed();
+        game.ask_to_play_again();
+        game.print_current_state();
+        game.process();
+        game.player_win();
+        game.player_lost();
 
     }
 }

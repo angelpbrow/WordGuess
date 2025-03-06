@@ -10,11 +10,6 @@ import java.util.Random;
 //Hangman class
 public class Hangman {
 
- // Lives: o o o
- // Input: x x x
- // word: _ell_
- // Not used:abcd_f__
- // ---------------
 
     public static void main(String[] args) {
         //greeting
@@ -26,57 +21,57 @@ public class Hangman {
         // if player chooses yes or no
         String answer = scanner.nextLine();
 
-        if (answer.equalsIgnoreCase("Y")){
-
-            System.out.println ("````` Hangman Deluxe v 1.0 ````");
-        } else {
-            System.out.println ("You thought you had a choice?");
+        if (answer.equalsIgnoreCase("N")) {
+            System.out.println("You thought you had a choice?");
             System.out.println("````` Hangman Deluxe v 1.0 ````");
 
-            // array of random words the game asks player to guess
-            String[] guessWords = {"lawnmower", "refrigerator", "toaster", "blender", "ladder", "vacuum"};
-
-            Random obj = new Random();
-            int Ran_num = obj.nextInt(6);
-            String word = (guessWords[Ran_num]);
-
-            for (int i = 0; i < word.length(); i++) {
-                word[i] = '_';
-            }
-
-
-            int lives = 0;
-        //scanner to accept user input
-        Scanner scanner = new Scanner(System.in);
-
-        while (lives > word.length()) {
-            System.out.print("Lives: ");
-
-            for (int i = 0; i < lives; i++){
-                System.out.print("o");
-            }
-
-            System.out.println();
-
-            System.out.println("Input: ");
-
-            String input = scanner.nextLine();
-
-            char letter = input.charAt(0);
-
-
+        } else {
+            System.out.println("````` Hangman Deluxe v 1.0 ````");
         }
 
+        // array of random words the game asks player to guess
+        String[] guessWords = {"lawnmower", "refrigerator", "toaster", "blender", "ladder", "vacuum"};
+
+        //grabs random word from array
+        String randomword = guessWords[(int) (Math.random() * guessWords.length)];
+
+        //stores the letter player chooses
+        char[] letters = new char[randomword.length()];
+
+
+        int lives = 0;
+        //scanner to accept user input
+        //Scanner scanner = new Scanner(System.in);
+
+        System.out.println();
+
+        System.out.println("Input: ");
+
+        String input = scanner.nextLine();
+
+        char letter = input.charAt(0);
+
+        System.out.print("Word: ");
+
+        for (int i = 0; i < letters.length; i++) {
+            System.out.print(letters[i]);
+        }
+
+        System.out.println();
 
 
 
 
 
-        Gameplay game = new Gameplay();
-        game.runGame();
+       System.out.println("Exiting game");
+
+}
+
+        //Gameplay game = new Gameplay();
+       // game.runGame();
     }
-}
-}
+
+
 
 
 /* hangman();
